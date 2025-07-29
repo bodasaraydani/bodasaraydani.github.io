@@ -23,7 +23,7 @@ body {
 
 /* Cabecera principal */
 .hero {
-  background-image: (/hero_bg.png');
+  background-image: url('hero_bg.png');
   background-size: cover;
   background-position: center;
   
