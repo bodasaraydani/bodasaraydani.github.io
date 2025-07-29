@@ -23,10 +23,10 @@ body {
 
 /* Cabecera principal */
 .hero {
-  background-image: url('images/hero_bg.png');
+  background-image: (/hero_bg.png');
   background-size: cover;
   background-position: center;
-  padding: 120px 20px;
+  
   text-align: center;
   color: var(--color-text);
 }
