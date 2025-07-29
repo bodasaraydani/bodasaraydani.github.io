@@ -1,0 +1,191 @@
+/*
+  Hoja de estilos para la web de la boda de Sara y Dani.
+  Se utilizan colores pastel y una estética minimalista para transmitir
+  elegancia y calidez. Siente la libertad de modificar estos estilos
+  según tus gustos.
+*/
+
+:root {
+  /* Colores principales */
+  --color-background: #faf7f1; /* Fondo muy claro beige */
+  --color-primary: #e8dccc;    /* Beige suave para áreas de contraste */
+  --color-accent: #cdbba7;     /* Beige medio para botones */
+  --color-text: #5d4a42;       /* Marrón suave para el texto */
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+}
+
+/* Cabecera principal */
+.hero {
+  background-image: url('images/hero_bg.png');
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+/* Secciones generales */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
+
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 1rem;
+}
+
+/* Listado de entradas de blog */
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.post {
+  flex: 1 1 300px;
+  max-width: 340px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-4px);
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.post h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin: 16px 16px 8px;
+}
+
+.post p {
+  margin: 0 16px 20px;
+  font-size: 0.95rem;
+}
+
+/* Botones */
+.button {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--color-text);
+}
+
+/* Notas y subtítulos */
+.note {
+  font-size: 0.8rem;
+  color: #7e6a5e;
+  margin-top: 10px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Formulario de RSVP */
+.rsvp-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #d9d0c0;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  color: var(--color-text);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Pie de página */
+.footer {
+  background-color: var(--color-primary);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 20px;
+  }
+  .hero-title {
+    font-size: 2.4rem;
+  }
+  .post-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .post {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+  Página web para la boda de Sara y Dani
+  Este sitio está pensado para ser minimalista, con colores pastel y tonos suaves.
+  Puedes alojar estos archivos en un servicio gratuito como GitHub Pages y conectar tu
+  dominio bodasaraydani.com actualizando los registros DNS (por ejemplo, con un
+  registro CNAME). Los textos y enlaces están pensados como ejemplos para que
+  puedas modificarlos fácilmente. Todas las imágenes decorativas se encuentran en
+  la carpeta `images/`.
+-->
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boda de Sara y Dani</title>
+    <!-- Tipografías Google para un estilo elegante y legible -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hero o cabecera principal -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Boda de Sara &amp; Dani</h1>
+        <p class="hero-subtitle">
+          ¡Bienvenidos a nuestra celebración! Nos encantaría que formes parte de
+          este día tan especial.
+        </p>
+      </div>
+    </header>
+
+    <!-- Sección de blog -->
+    <section id="blog" class="section">
+      <h2 class="section-title">Nuestro blog</h2>
+      <p class="section-intro">
+        Aquí compartiremos noticias y actualizaciones sobre nuestra boda.
+      </p>
+      <div class="post-list">
+        <article class="post">
+          <img src="images/blog1.png" alt="Ramo de flores" />
+          <h3>Cómo empezó todo</h3>
+          <p>
+            Hace años nuestras miradas se cruzaron y desde entonces hemos
+            compartido infinidad de aventuras. En esta entrada te contamos los
+            orígenes de nuestra historia de amor.
+          </p>
+        </article>
+        <article class="post">
+          <img src="images/blog2.png" alt="Anillos de boda" />
+          <h3>Preparativos con ilusión</h3>
+          <p>
+            Organizar una boda es emocionante y divertido. Te explicamos cómo
+            hemos elegido cada detalle para que nuestro día sea inolvidable para
+            todos.
+          </p>
+        </article>
+        <article class="post">
+          <img src="images/blog3.png" alt="Tarta de boda" />
+          <h3>Detalles dulces</h3>
+          <p>
+            Nuestra tarta y postres estarán inspirados en sabores que nos
+            encantan. ¡Descubre qué delicias podrás probar el gran día!
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección para subir fotos -->
+    <section id="fotos" class="section">
+      <h2 class="section-title">Comparte tus fotos</h2>
+      <p class="section-intro">
+        Queremos recordar cada momento especial de nuestra boda. Te
+        invitamos a subir tus fotos favoritas para que todos podamos
+        disfrutarlas.
+      </p>
+      <!-- Botón que enlaza a un servicio externo de subida de fotos. -->
+      <!-- Por defecto apunta a un enlace vacío; reemplázalo con un enlace de Google
+           Photos, Dropbox, etc., donde los invitados puedan subir imágenes. -->
+      <a class="button" href="#" target="_blank">Subir fotos</a>
+      <p class="note">
+        *El enlace se abrirá en una nueva pestaña. Actualiza la dirección para
+        dirigir a tus invitados a un formulario o carpeta donde puedan subir
+        imágenes.
+      </p>
+    </section>
+
+    <!-- Sección RSVP -->
+    <section id="rsvp" class="section">
+      <h2 class="section-title">Confirma tu asistencia</h2>
+      <p class="section-intro">
+        Por favor, rellena el siguiente formulario para confirmar tu asistencia
+        y comunicar cualquier intolerancia alimentaria.
+      </p>
+      <!-- El atributo action utiliza mailto para enviar la respuesta por correo
+           electrónico. Cambia la dirección a una cuenta de correo válida asociada
+           a tu dominio (por ejemplo, info@bodasaraydani.com) o utiliza un
+           servicio de formularios externo para gestionar las respuestas. -->
+      <form
+        class="rsvp-form"
+        method="POST"
+        action="mailto:contacto@bodasaraydani.com"
+        enctype="text/plain"
+      >
+        <div class="form-group">
+          <label for="nombre">Nombre y apellidos</label>
+          <input type="text" id="nombre" name="Nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="Email" required />
+        </div>
+        <div class="form-group">
+          <label for="asistencia">¿Asistirás?</label>
+          <select id="asistencia" name="Asistencia">
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="acompanantes">Número de acompañantes</label>
+          <input
+            type="number"
+            id="acompanantes"
+            name="Acompañantes"
+            min="0"
+            max="10"
+            value="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="intolerancias">Intolerancias o alergias</label>
+          <textarea
+            id="intolerancias"
+            name="Intolerancias"
+            rows="3"
+            placeholder="Especifica cualquier intolerancia o preferencia alimentaria"
+          ></textarea>
+        </div>
+        <button type="submit" class="button">Enviar</button>
+      </form>
+      <p class="note">
+        *Si el formulario no se envía correctamente, puedes copiar y pegar la
+        información en un correo electrónico dirigido a nuestro e‑mail de
+        contacto.
+      </p>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+      <p>&copy; 2025 Sara &amp; Dani. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
